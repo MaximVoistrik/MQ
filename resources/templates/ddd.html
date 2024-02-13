@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Модальное окно</title>
+  <style>
+    /* Стили для модального окна */
+    #myModalSignIn {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      justify-content: center;
+      align-items: center;
+      margin-left: 0px;
+      margin-top: 0px;
+    }
+
+    .modalSignIn {
+      z-index: 2;
+      position: relative;
+      background-color: rgb(255, 255, 255);
+      box-shadow: 0px 2px 40px 0px #D0D2FE;
+      margin-left: 600px;
+      margin-top: 200px;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    /* Стили для кнопки закрытия (крестика) */
+    .closeButton {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+      font-size: 18px;
+      color: #777;
+    }
+
+    .closeButton:hover {
+      color: #492BA6;
+    }
+
+    .modal-contentSignIn {
+      text-align: center;
+    }
+
+    /* Стили для кнопки */
+    .homeSignIn {
+      font-size: 18px;
+      font-family: 'Hammersmith One';
+      color: #492BA6;
+      cursor: pointer;
+    }
+
+    /* Стили для заголовка модального окна */
+    .modal-titleSignIn {
+      font-size: 24px;
+      font-family: 'Hammersmith One';
+      color: #492BA6;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+<!-- Кнопка с классом homeSignIn -->
+<div class="centerHomeSignIn">
+  <button class="homeSignIn" onclick="openModalSignIn()">Sign in</button>
+</div>
+
+<!-- Модальное окно -->
+<div id="myModalSignIn" class="modal">
+  <div class="modalSignIn">
+    <span class="closeButtonModalSignIn" onclick="closeModalSignIn()">&times;</span>
+    <div class="modal-contentSignIn">
+      <div class="modal-titleSignIn">SignIn</div>
+      <!-- Здесь можете разместить содержимое вашего модального окна -->
+      <p>Это модальное окно! Здесь может быть ваш контент.</p>
+      <button onclick="closeModalSignIn()">Закрыть</button>
+    </div>
+  </div>
+</div>
+
+<!-- Скрипт для управления модальным окном и прокруткой страницы -->
+<script>
+  function openModalSignIn() {
+    document.getElementById('myModalSignIn').style.display = 'flex'; // Открываем модальное окно
+    document.body.style.overflow = 'hidden'; // Запрещаем прокрутку страницы
+  }
+
+  function closeModalSignIn() {
+    document.getElementById('myModalSignIn').style.display = 'none'; // Закрываем модальное окно
+    document.body.style.overflow = 'auto'; // Разрешаем прокрутку страницы
+  }
+</script>
+</body>
+</html>

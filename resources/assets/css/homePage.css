@@ -1,0 +1,2563 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+svg {
+    width: 100%; /* Занимает 100% ширины родительского контейнера (в данном случае, body) */
+    height: auto; /* Автоматически подстраивается по высоте */
+}
+
+
+.centerHomeSignIn{
+    margin-left: 1200px;
+    margin-top: -200px;
+}
+
+.homeSignIn {
+    background-color: transparent; /* Устанавливаем цвет фона кнопки как прозрачный */
+    border-radius: 10px; /* Добавляем границу для видимости кнопки */
+    padding: 10px 20px; /* Устанавливаем внутренние отступы (по вашему выбору) */
+    color: #000; /* Устанавливаем цвет текста кнопки */
+    font-size: 16px; /* Устанавливаем размер шрифта (по вашему выбору) */
+    cursor: pointer; /* Добавляем стиль курсора при наведении на кнопку */
+    border: none; /* Убираем бордер */
+    outline: none; /* Убираем контур при фокусе (например, при нажатии клавиши Tab) */
+}
+
+/* Стиль для наведения на кнопку входа */
+.homeSignIn:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Добавляем слабый цвет фона при наведении на кнопку */
+}
+
+
+.centerHomeSignUp{
+    margin-left: 1295px;
+    padding-top: -700px;
+    margin-top: -44px;
+}
+
+.homeSignUp {
+    background-color: #F6F4FF; /* Устанавливаем цвет фона кнопки как прозрачный */
+    border-radius: 10px; /* Добавляем границу для видимости кнопки */
+    padding: 10px 20px; /* Устанавливаем внутренние отступы (по вашему выбору) */
+    color: #000; /* Устанавливаем цвет текста кнопки */
+    font-size: 16px; /* Устанавливаем размер шрифта (по вашему выбору) */
+    cursor: pointer; /* Добавляем стиль курсора при наведении на кнопку */
+    border: none; /* Убираем бордер */
+    outline: none; /* Убираем контур при фокусе (например, при нажатии клавиши Tab) */
+
+}
+
+/* Стиль для наведения на кнопку входа */
+.homeSignUp:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Добавляем слабый цвет фона при наведении на кнопку */
+}
+
+
+
+
+
+#myModalSignUp {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    margin-left: 0px;
+    margin-top: 0px;
+}
+
+.modalSignUp {
+    z-index: 2;
+    width: 900px;
+    height: 630px;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 2px 40px 0px #D0D2FE;
+    /* margin-left: 0px; */
+    /* margin-top: 200px; */
+    padding: 20px;
+    border-radius: 40px;
+}
+
+/* Стили для кнопки закрытия (крестика) */
+.closeButtonModalSignUp {
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 50px;
+    color: #754fbf;
+}
+
+.closeButtonModalSignUp:hover {
+    color: #492BA6;
+}
+
+.modal-contentSignUp {
+    text-align: center;
+}
+
+/* Стили для кнопки */
+.homeSignIn {
+    font-size: 18px;
+    font-family: 'Hammersmith One';
+    color: #492BA6;
+    cursor: pointer;
+}
+
+/* Стили для заголовка модального окна */
+.modal-titleSignUp {
+    font-size: 24px;
+    font-family: 'Hammersmith One';
+    color: #492BA6;
+    margin-bottom: 20px;
+}
+
+
+.sendRequestSignUp .form-container {
+    padding: 0px;
+    margin-left: 300px;
+}
+
+.sendRequestSignUp .registration-form {
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+.sendRequestSignUp label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+
+}
+
+.sendRequestSignUp input,
+.sendRequestSignUp select {
+    width: 230px;
+    height: 45px;
+    padding: 8px;
+    margin-bottom: 95px;
+    box-sizing: border-box;
+    border: 1px;
+    border-radius: 10px;
+    background: #F6F4FF;
+}
+
+.sendRequestSignUp input:focus,
+.sendRequestSignUp select:focus {
+    outline: 2px solid #5F3CCCFF; /* Задайте желаемый цвет обводки */
+}
+
+.sendRequestSignUp input::placeholder,
+.sendRequestSignUp select::placeholder {
+    font-size: 12px;
+    color: #8C7CBF; /* Цвет плейсхолдера */
+    /* Наклонный стиль */
+
+    font-family: Poppins;
+    font-weight: 400;
+    text-align: left;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.custom-buttonSendRequestSignIn {
+    width: 480px;
+    height: 45px;
+    background-color: #6a5acc;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: normal;
+    text-align: center;
+    position: relative;
+    left: -20px; /* Используем left вместо margin-left */
+}
+
+.custom-buttonSendRequestSignIn:hover {
+    background-color: rgb(136, 3, 244); /* Изменяем цвет фона при наведении */
+}
+
+
+
+.error-messageSignUp {
+    color: #ba2b2b;
+    margin-top: -90px;
+    margin-bottom: 8px;
+    font-size: 10px;
+    font-family: 'Poppins';
+    font-weight: bold;
+    text-align: left;
+}
+
+.learnButtonContainerSignIn {
+    margin-left: 20px; /* Расстояние между формой и кнопкой */
+}
+
+
+.sendRequestSignUp .svgSingIn {
+    width: 330px;
+    /* padding: 0px; */
+    margin-left: 30px;
+    margin-top: -400px;
+}
+
+
+.sendRequestSignUp .svgSingInOR {
+    width: 300px;
+    /* padding: 0px; */
+    margin-left: 80px;
+    margin-top: -450px;
+}
+
+.sendRequestSignUp .svgSingInB {
+    width: 300px;
+    /* padding: 0px; */
+    margin-left: 80px;
+    margin-top: -450px;
+}
+
+.singInOR {
+    width: 300px;
+    /* padding: 0px; */
+    margin-left: 490px;
+    margin-top: -50px;
+}
+
+.singInORLineOne {
+    width: 220px;
+    /* padding: 0px; */
+    margin-left: 660px;
+    margin-top: -40px;
+}
+
+.singInORLineTwo {
+    width: 220px;
+    /* padding: 0px; */
+    margin-left: 400px;
+    margin-top: -18px;
+}
+
+.singUpWithGoogle {
+    width: 220px;
+    /* padding: 0px; */
+    margin-left: 400px;
+    margin-top: -18px;
+}
+
+.custom-buttonSendRequestSignUpWithGoogle {
+    width: 480px;
+    height: 45px;
+    background-color: #f6f4ff;
+    color: #5f3ccc;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    /* margin-left: 0px; */
+    margin-top: 50px;
+    font-size: 14px;
+    font-weight: normal;
+    text-align: center;
+}
+
+.custom-buttonSendRequestSignUpWithGoogle:hover {
+   color: #F6F4FFFF;
+    background-color: #5f3ccc;
+}
+
+.singUpWithGoogleSVG {
+    width: 20px;
+    /* padding: 0px; */
+    margin-left: 535px;
+    margin-top: -32px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#myModalSignIn {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    margin-left: 0px;
+    margin-top: 0px;
+}
+
+
+.modalSignIn {
+    z-index: 2;
+    width: 900px;
+    height: 500px;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 2px 40px 0px #D0D2FE;
+    /* margin-left: 0px; */
+    /* margin-top: 200px; */
+    padding: 20px;
+    border-radius: 40px;
+}
+
+/* Стили для кнопки закрытия (крестика) */
+.closeButtonModalSignIn {
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 50px;
+    color: #754fbf;
+}
+
+.closeButtonModalSignIn:hover {
+    color: #492BA6;
+}
+
+.modal-contentSignIn {
+    text-align: center;
+}
+
+/* Стили для кнопки */
+.homeSignIn {
+    font-size: 18px;
+    font-family: 'Hammersmith One';
+    color: #492BA6;
+    cursor: pointer;
+}
+
+/* Стили для заголовка модального окна */
+.modal-titleSignIn {
+    font-size: 42px;
+    font-family: 'Hammersmith One';
+    color: #492BA6;
+
+    text-align: left;
+    padding-left:460px;
+}
+
+.modal-titleLitleSignIn {
+    font-size: 18px;
+    font-family: 'Poppins';
+    color: #8c7cbf;
+    margin-bottom: 20px;
+    text-align: left;
+    font-weight: normal;
+    padding-left:460px;
+}
+
+
+
+
+
+
+
+.sendRequestSignIn .form-container {
+    padding: 0px;
+    margin-left: 420px;
+}
+
+.sendRequestSignIn .registration-form {
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+.sendRequestSignIn label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+
+}
+
+.sendRequestSignIn input,
+.sendRequestSignIn select {
+    width: 380px;
+    height: 45px;
+    padding: 8px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    border: 1px;
+    border-radius: 10px;
+    background: #F6F4FF;
+}
+
+.sendRequestSignIn input:focus,
+.sendRequestSignIn select:focus {
+    outline: 2px solid #5F3CCCFF; /* Задайте желаемый цвет обводки */
+}
+
+.sendRequestSignIn input::placeholder,
+.sendRequestSignIn select::placeholder {
+    font-size: 12px;
+    color: #8C7CBF; /* Цвет плейсхолдера */
+    /* Наклонный стиль */
+
+    font-family: Poppins;
+    font-weight: 400;
+    text-align: left;
+
+}
+.sendRequestSignIn .svgSingIn {
+    width: 370px;
+    margin-left: 45px;
+    margin-top: -420px;
+}
+
+
+
+
+/* Стили для контейнера (ячейки) */
+.remember-me {
+    display: flex;
+    align-items: center;
+    margin-left: -165px;
+    border-radius: 10px; /* Добавляем скругление углов */
+}
+
+/* Стили для текста */
+.remember-me-label {
+    margin-left: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Стили для галочки */
+.remember-me-checkbox {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.custom-buttonSendRequestSignIn {
+    width: 380px;
+    height: 45px;
+    background-color: #6a5acc;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: normal;
+    text-align: center;
+    position: relative;
+    left: -20px; /* Используем left вместо margin-left */
+}
+
+.custom-buttonSendRequestSignIn:hover {
+    background-color: rgb(136, 3, 244); /* Изменяем цвет фона при наведении */
+}
+
+
+
+
+.custom-buttonSendRequestSignUp {
+    width: 480px;
+    height: 45px;
+    background-color: #6a5acc;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: normal;
+    text-align: center;
+    position: relative;
+    left: 0px; /* Используем left вместо margin-left */
+}
+
+.custom-buttonSendRequestSignUp:hover {
+    background-color: rgb(136, 3, 244); /* Изменяем цвет фона при наведении */
+}
+
+
+
+.error-messageSignUp {
+    color: #ba2b2b;
+    margin-top: -90px;
+    margin-bottom: 8px;
+    font-size: 10px;
+    font-family: 'Poppins';
+    font-weight: bold;
+    text-align: left;
+}
+
+.learnButtonContainerSignIn {
+    margin-left: 20px; /* Расстояние между формой и кнопкой */
+}
+
+
+
+.sendRequestSignUp .svgSingUp {
+    width: 330px;
+    /* padding: 0px; */
+    margin-left: 30px;
+    margin-top: -400px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.centerImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px; /* 50% ширины видимой области (viewport width) */
+    height: 278px; /* 50% высоты видимой области (viewport height) */
+    padding-left: 790px;
+    margin-top: 100px; /* Отрицательное значение для поднятия контейнера чуть выше */
+}
+
+.centerText {
+       text-align: left; /* Выравнивание текста внутри контейнера */
+    margin-top: -250px;
+    padding-left: 350px;
+}
+
+
+/*.centerSearch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+}*/
+/*
+.centerSearch form {
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 56px;
+    width: 840px;
+    box-shadow: 0px 2px 40px 0px #CFD1FE;
+    margin-top: 70px;
+    margin-left: 20px;
+}
+
+.centerSearch input {
+    border: none;
+    height: 90%;
+    width: calc(100% - 100px); !* Добавил вычитание отступов слева и справа *!
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top:-1px;
+}*/
+
+
+.centerSearch {
+
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    margin-top: 70px;
+    margin-left: 325px;
+}
+
+.centerSearch form {
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 56px;
+    width: 660px;
+    margin-top: 70px;
+    margin-left: 30px;
+    box-shadow: 0px 2px 40px 0px #CFD1FE;
+}
+
+.centerSearch input {
+    border: none;
+    height: 90%;
+    width: calc(100% - 100px);
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: -1px;
+    margin-left: -20px;
+}
+
+.searchButtonContainer {
+    margin-left: 20px; /* Расстояние между формой и кнопкой */
+}
+
+.searchButtonTr {
+    background: none;
+    border: none;
+    align-items: center;
+    padding-left: 35px;
+    margin-top: 69px;
+
+}
+
+.searchButton svg {
+    width: 100%;
+    height: auto;
+}
+
+.centerSearch input::placeholder {
+    color: rgba(66, 3, 132, 0.61); /* Замените #your_color на нужный цвет */
+
+}
+
+.centerSearchGlass {
+    width: 13px;
+    height: 13px;
+    text-align: left;
+    margin-top: -42px;
+    padding-left: 380px;
+}
+
+
+
+
+
+.centerRoundedBord{
+    margin-top: 100px;
+    padding-left: 350px;
+}
+.bord {
+    width: 838px;
+    height: 185px;
+    background-color: #754fbf;
+    border-radius: 40px;
+}
+
+
+.centerTextBord {
+    text-align: left;
+    margin-top: -190px;
+    padding-left: 60px;
+}
+
+.centerLineBord {
+    width: 210px;
+    height: 200px;
+    text-align: left;
+    margin-top: -35px;
+    margin-left: 410px;
+}
+
+.centerLittleTextBord {
+
+    text-align: left;
+    margin-top: -315px;
+    margin-left: 660px;
+}
+
+.centerGeneralChooseTextBord {
+
+    text-align: left;
+    margin-top: 100px;
+    margin-left: 510px;
+}
+
+.gridContainer {
+    display: flex;
+    flex-direction: column;
+    margin-left: 260px;
+    margin-top: 60px;
+    gap: 120px; /* Расстояние между строками */
+
+}
+
+.row {
+    display: flex;
+    gap: 120px;
+}
+
+.roundedSquareBlue {
+    width: 264px;
+    height: 270px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0px 2px 40px 0px #D8ECFF;
+
+}
+
+.roundedSquarePink {
+    width: 264px;
+    height: 270px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0px 2px 40px 0px #eaceff;
+
+}
+
+.pictureChoose {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    height: 70%;
+    margin-left: 40px;
+    margin-top: 10px;
+}
+
+.pictureChooseLineTwo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    height: 70%;
+    margin-left: 40px;
+    padding-top: -50px;
+}
+
+.pictureChoose svg {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.roundedSquareBlue p {
+    font-family: Poppins;
+    font-size: 21px;
+
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+    font-weight: 600;
+    text-align: center;
+}
+
+.roundedSquarePink p {
+    font-family: Poppins;
+    font-size: 21px;
+
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+    font-weight: 600;
+    /*margin-left: 50px;
+    margin-top: 20px;*/
+    text-align: center;
+}
+.pictureChooseLineTwo svg {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+.centerTextCart {
+    text-align: center;
+    margin-top: 50px;
+    margin-left: -20px;
+}
+
+.centerTextCartA {
+    margin: auto;
+    /* Дополнительные стили, если необходимо */
+}
+.centerTextCartB {
+    text-align: center;
+    margin-top: 50px;
+
+
+    /* Дополнительные стили, если необходимо */
+}
+
+.centerTextCartB a {
+    display: inline-block;
+    margin: auto;
+    margin-top: -10px;
+}
+
+.roundedSquareBlue a {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+    text-decoration: none; /* Убираем подчеркивание */
+    }
+
+.roundedSquareBlue .a:hover {
+    /* Стили для состояния наведения, если нужно */
+}
+
+.roundedSquarePink a {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+    text-decoration: none; /* Убираем подчеркивание */
+}
+
+.roundedSquarePink .a:hover {
+    /* Стили для состояния наведения, если нужно */
+}
+
+.centerGeneralChooseTextBordTwo {
+
+    text-align: left;
+    margin-top: 150px;
+    margin-left: 260px;
+}
+
+.centerRoundedBordPink{
+    margin-top: 100px;
+    padding-left: 350px;
+}
+
+.bordPink {
+    width: 838px;
+    height: 185px;
+    background-color: #F6F4FF;
+    border-radius: 40px;
+}
+
+.pictureBordPink{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 278px;
+    padding-left: 70px;
+    margin-top: -230px;
+}
+
+.centerLittleTextBordPink {
+
+    text-align: left;
+    margin-top: -230px;
+    margin-left: 390px;
+}
+
+
+.centerGeneralChooseTextBordThree {
+
+    text-align: left;
+    margin-top: 150px;
+    margin-left: 520px;
+}
+
+.containerSkill {
+    display: flex;
+    /* justify-content: space-around; */
+    margin-top: 130px;
+    gap: 60px;
+    margin-left: 70px;
+
+}
+
+.roundedRectangleSkill {
+    width: 300px;
+    height: 110px;
+    border-radius: 40px;
+    background-color: #FFCA42;
+}
+
+.arrowOne {
+    width: 200px;
+    height: 110px;
+    margin-top: -200px;
+    margin-left: 300px;
+}
+
+.arrowTwo {
+    width: 200px;
+    height: 110px;
+    margin-top: -110px;
+    margin-left: 1000px;
+}
+
+.arrowThree {
+    width: 200px;
+    height: 110px;
+    margin-top: 120px;
+    margin-left: 650px;
+}
+
+.centerLittleTextBordStep {
+
+    text-align: left;
+    margin-top: 25px;
+    margin-left: 55px;
+    font-weight: bold;
+
+
+}
+
+.centerLittleTextBordStepOne {
+
+    text-align: left;
+    margin-top: 27px;
+    margin-left: 60px;
+    font-weight: bold;
+}
+
+.centerLittleTextBordStepTwo {
+
+    text-align: left;
+    margin-top: 27px;
+    margin-left: 60px;
+    font-weight: bold;
+}
+
+.centerLittleTextBordStepThree {
+
+    text-align: left;
+    margin-top: 27px;
+    margin-left: 60px;
+    font-weight: bold;
+}
+
+
+
+.centerGeneralChooseTextBordFor {
+    text-align: left;
+    margin-top: -1020px;
+    margin-left: 450px;
+}
+
+
+
+/*.rounded-rectangle {
+    width: 200px;
+    height: 100px;
+    background-color: #6A5ACC;
+    border-radius: 10px;
+    box-shadow: 0px 2px 40px 0px #D0D2FE;
+}*/
+
+.rounded-rectangle {
+    position: relative;
+    z-index: 1;
+    text-align: left;
+    margin-left: 170px;
+    width: 1200px;
+    height: 780px;
+    border-radius: 40px;
+    box-shadow: 0px 2px 40px 0px #D0D2FE;
+    margin-top: 60px;
+}
+
+
+
+
+
+/*
+-----------------------------------*/
+.widget-container {
+    text-align: center;
+    background-color: #FFFFFF;
+    border-radius: 40px;
+    width: 1200px;
+    height: 780px;
+
+}
+
+.tabs {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-top: 30px;
+}
+
+a {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #2D196C;
+    text-decoration: none;
+    position: relative;
+    margin: 0 30px;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #d9a423;
+}
+
+.indicator {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    background-color: #c3b6fd;
+    transition: width 0.3s, transform 0.3s;
+    width: 0;
+    border-radius: 20px;
+}
+
+/*.info-block {
+    position: relative;
+    z-index: 2;
+    text-align: left;
+    margin-top: -10px;
+}*/
+
+.lineCourses {
+    width: 530px;
+    margin-top: -35px;
+    margin-left: 335px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.block-container {
+    display: flex;
+    justify-content: space-between;
+    width: 870px;
+    margin-left: -50px;
+    margin-top: 40px;
+    color: white;
+}
+
+.blockCardImg {
+    width: 85%;
+    margin-top: 30px;
+}
+
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.info-block {
+    width: 400px;
+
+    margin-top: -20px;
+    border-radius: 40px;
+    margin-left: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+
+}
+
+
+
+.blockCard {
+    width: 410px;
+    height: 600px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0px 2px 20px 0px #D0D2FE;
+    margin-top: -20px;
+}
+
+
+.blockCardImg {
+    width: 85%;
+    margin-top: 30px;
+}
+
+.textCarousel {
+    font-weight: bold;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-left: 30px;
+    margin-top: 10px;
+
+}
+
+.textCarouselDescription {
+
+
+
+    /* line-height: 38px; */
+    letter-spacing: 0em;
+    text-align: left;
+    margin-left: 30px;
+    width: 354px;
+    margin-top: -10px;
+}
+
+.textCarouselLesson {
+
+
+
+    /* line-height: 38px; */
+    letter-spacing: 0em;
+    text-align: left;
+    margin-left: 30px;
+    width: 354px;
+    margin-top: -5px;
+    font-weight: bold;
+}
+
+.learnButtonContainer {
+    margin-left: 20px; /* Расстояние между формой и кнопкой */
+}
+
+.custom-button {
+    width: 350px;
+    height: 40px;
+    background-color: #6a5acc;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: -20px;
+    margin-top: -5px;
+    font-size: 14px; /* Размер шрифта */
+    font-weight: normal; /* Жирный текст */
+    text-align: center; /* Выравнивание текста по центру */
+
+}
+
+.custom-button:hover {
+    background-color: rgb(95, 60, 204); /* Изменяем цвет фона при наведении */
+}
+
+
+.overlay-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    background-color: #ffffff; /* Фиолетовый цвет обода кнопки */ /* Желтый цвет текста кнопки */
+    padding: 10px 20px;
+    border: 2px solid #8C7CBF; /* Добавляем толщину и цвет границы */
+    border-radius: 15px;
+    height: 50px;
+    width: 100px;
+    cursor: pointer;
+    margin-left: -100px;
+    margin-top: 50px;
+}
+
+
+
+.overlay-button:hover {
+    background-color: rgb(95, 60, 204); /* Изменяем цвет фона при наведении */
+}
+
+.overlayTwo-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    background-color: #ffffff; /* Фиолетовый цвет обода кнопки */ /* Желтый цвет текста кнопки */
+    padding: 10px 20px;
+    border: 2px solid #8C7CBF; /* Добавляем толщину и цвет границы */
+    border-radius: 15px;
+    height: 50px;
+    width: 100px;
+    cursor: pointer;
+    margin-left: 360px;
+    margin-top: 50px;
+}
+
+
+
+.overlayTwo-button:hover {
+    background-color: rgb(95, 60, 204); /* Изменяем цвет фона при наведении */
+}
+
+.link-container {
+    /* display: flex; */
+    /* align-items: center; */
+    margin-left: 325px;
+    font-size: 18px;
+}
+
+.link-text {
+    margin-right: -380px;
+    margin-top: 0px;
+}
+
+.arrow {
+    margin-left: 450px;
+    margin-top: -25px;
+    font-size: 26px;
+}
+
+.underline {
+    border-bottom: 2px solid #2d196c;
+    margin-top: -50px;
+    width: 95px;
+    margin-left: 345px;
+}
+
+.link-container:hover {
+    transform: scale(1.1);
+    color: rgb(95, 60, 204); /* новый цвет текста при наведении */
+   }
+
+.link-container:hover .underline {
+    border-color: rgb(95, 60, 204); /* новый цвет границы при наведении */
+}
+
+
+
+
+
+
+
+.coursesAll {
+    position: relative;
+    text-decoration: none;
+    color: #2d196c;
+    padding: 10px 0px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: inline-block;
+    margin-top: 10px;
+    margin-right: -350px;
+}
+
+.coursesAll::after {
+    content: '';
+    position: absolute;
+    /* Уменьшенное значение */
+    left: 0;
+    width: 100%;
+    height: 2px; /* Толщина полоски */
+    background-color: #2d196c; /* Цвет полоски */
+    display: block;
+    transform: scaleX(1); /* Изначально полоска видима */
+    transform-origin: bottom right;
+    margin-bottom: 10px; /* Отступ снизу для полоски */
+
+}
+
+.coursesAll:hover {
+    color: #d9a423; /* Изменение цвета текста при наведении */
+}
+
+.coursesAll:hover::after {
+    background-color: #d9a423; /* Изменение цвета полоски при наведении */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*.block-containerNews {
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+    width: 870px;
+    margin-left: -50px;
+    margin-top: 40px;
+    color: rgba(8, 4, 9, 0.84);
+}
+
+.blockCardImgNews {
+    width: 85%;
+    margin-top: 30px;
+}
+
+
+.imgNews {
+    width: 100%;
+    height: auto;
+}
+
+
+
+
+
+
+
+.blockCardImgNews {
+    width: 85%;
+    margin-top: 30px;
+}
+
+
+.info-block.active {
+    display: block;
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.newsBlock-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 870px;
+    margin-left: -50px;
+    margin-top: 40px;
+    color: white;
+}
+
+.blockNewsCard {
+
+    height: 300px;
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 0px 2px 20px 0px #D0D2FE;
+    margin-top: -20px;
+    width: calc(33.33% - 40px);
+    margin-bottom: 70px;}
+
+
+.newsBlock-container .blockNewsCard:nth-child(5) {
+    margin-right: 250px; /* Помещаем блок номер пять в конец строки */
+}
+
+
+.textNews {
+    font-weight: bold;
+
+    letter-spacing: 0em;
+    text-align: left;
+    margin-left: 85px;
+    margin-top: 10px;
+
+}
+
+.blockNewsCardImg {
+    width: 85%;
+    margin-top: 20px;
+}
+
+
+img {
+    width: 100%;
+}
+.newsA {
+    position: relative;
+    text-decoration: none;
+    color: #5f3ccc;
+    padding: 10px 0px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px; /* Отступ снизу */
+    display: inline-block; /* Добавлено, чтобы margin-bottom применялось */
+}
+
+.newsA::after {
+    content: '';
+    position: absolute;
+    bottom: -8px; /* Уменьшенное значение */
+    left: 0;
+    width: 100%;
+    height: 2px; /* Толщина полоски */
+    background-color: #5f3ccc; /* Цвет полоски */
+    display: block;
+    transform: scaleX(1); /* Изначально полоска видима */
+    transform-origin: bottom right;
+    margin-bottom: 10px; /* Отступ снизу для полоски */
+}
+
+.newsA:hover {
+    color: #d9a423; /* Изменение цвета текста при наведении */
+}
+
+.newsA:hover::after {
+    background-color: #d9a423; /* Изменение цвета полоски при наведении */
+}
+
+
+
+
+
+.newsAll {
+    position: relative;
+    text-decoration: none;
+    color: #2d196c;
+    padding: 10px 0px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: inline-block;
+    margin-top: -240px;
+    margin-left: 700px;
+}
+
+.newsAll::after {
+    content: '';
+    position: absolute;
+    /* Уменьшенное значение */
+    left: 0;
+    width: 100%;
+    height: 2px; /* Толщина полоски */
+    background-color: #2d196c; /* Цвет полоски */
+    display: block;
+    transform: scaleX(1); /* Изначально полоска видима */
+    transform-origin: bottom right;
+    margin-bottom: 10px; /* Отступ снизу для полоски */
+
+}
+
+.newsAll:hover {
+    color: #d9a423; /* Изменение цвета текста при наведении */
+}
+
+.newsAll:hover::after {
+    background-color: #d9a423; /* Изменение цвета полоски при наведении */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.linksBlock-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 870px;
+    margin-left: -50px;
+    margin-top: -656px;
+    color: white;
+}
+
+.blockLinksCard {
+
+    height: 220px;
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 0px 2px 20px 0px #D0D2FE;
+    margin-top: -20px;
+    width: calc(33.33% - 40px);
+    margin-bottom: 70px;
+}
+
+
+.linksBlock-container .blockNewsCard:nth-child(5) {
+    margin-right: 310px; /* Помещаем блок номер пять в конец строки */
+}
+
+
+.textLinks {
+    position: relative;
+    text-decoration: none;
+    color: #2d196c;
+    padding: 10px 0px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px; /* Отступ снизу */
+    display: inline-block; /* Добавлено, чтобы margin-bottom применялось */
+    margin-left: 70px;
+}
+
+.textLinks:hover {
+    color: #d9a423; /* Изменение цвета текста при наведении */
+}
+
+.blockLinksCardImg {
+    width: 85%;
+    margin-top: 20px;
+    margin-left: 19px;
+}
+
+
+img {
+    width: 100%;
+}
+.linksA {
+    position: relative;
+    text-decoration: none;
+    color: #5f3ccc;
+    padding: 10px 0px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px; /* Отступ снизу */
+    display: inline-block; /* Добавлено, чтобы margin-bottom применялось */
+}
+
+.linksA::after {
+    content: '';
+    position: absolute;
+    bottom: -8px; /* Уменьшенное значение */
+    left: 0;
+    width: 100%;
+    height: 2px; /* Толщина полоски */
+    background-color: #5f3ccc; /* Цвет полоски */
+    display: block;
+    transform: scaleX(1); /* Изначально полоска видима */
+    transform-origin: bottom right;
+    margin-bottom: 10px; /* Отступ снизу для полоски */
+}
+
+.linksA:hover {
+    color: #d9a423; /* Изменение цвета текста при наведении */
+}
+
+.linksA:hover::after {
+    background-color: #d9a423; /* Изменение цвета полоски при наведении */
+}
+
+
+
+
+
+.linksAll {
+    position: relative;
+    text-decoration: none;
+    color: #2d196c;
+    padding: 10px 0px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: inline-block;
+    margin-top: -10px;
+    margin-left: 400px;
+}
+
+.linksAll::after {
+    content: '';
+    position: absolute;
+    /* Уменьшенное значение */
+    left: 0;
+    width: 100%;
+    height: 2px; /* Толщина полоски */
+    background-color: #2d196c; /* Цвет полоски */
+    display: block;
+    transform: scaleX(1); /* Изначально полоска видима */
+    transform-origin: bottom right;
+    margin-bottom: 10px; /* Отступ снизу для полоски */
+
+}
+
+.linksAll:hover {
+    color: #d9a423; /* Изменение цвета текста при наведении */
+}
+
+.linksAll:hover::after {
+    background-color: #d9a423; /* Изменение цвета полоски при наведении */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.centerGeneralProvideTextBordFive {
+    text-align: left;
+     margin-top: 70px;
+    margin-left: 280px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.centerRoundedBordSendRequest{
+    margin-top: 0px;
+    padding-left: 350px;
+}
+
+.rectangleBordSendRequest {
+    width: 838px;
+    height: 95px;
+
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    background: linear-gradient(90deg, #65379B 0%, #886AEA 53%, #6457C6 100%);
+
+}
+.bordSendRequest {
+    width: 838px;
+    height: 665px;
+    background-color: #ffffff;
+    border-radius: 40px;
+    box-shadow: 0px 2px 40px 0px #D0D2FE;
+}
+
+.centerTextBordSendRequest {
+    text-align: left;
+    padding-left: 40px;
+    padding-top: 5px;
+}
+
+
+.pictureSendRequest{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 278px;
+    padding-left: 70px;
+    margin-top: -230px;
+}
+
+
+
+
+
+
+
+
+
+
+.sendRequest .form-container {
+    padding: 0px;
+    margin-left: -350px;
+}
+
+.sendRequest .registration-form {
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+.sendRequest label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.sendRequest input,
+.sendRequest select {
+    width: 350px;
+    height: 45px;
+    padding: 8px;
+    margin-bottom: 95px;
+    box-sizing: border-box;
+    border: 1px;
+    border-radius: 10px;
+    background: #F6F4FF;
+}
+
+.sendRequest input:focus,
+.sendRequest select:focus {
+    outline: 2px solid #5F3CCCFF; /* Задайте желаемый цвет обводки */
+}
+
+.sendRequest input::placeholder,
+.sendRequest select::placeholder {
+    font-size: 12px;
+    color: #8C7CBF; /* Цвет плейсхолдера */
+     /* Наклонный стиль */
+
+    font-family: Poppins;
+    font-weight: 400;
+    text-align: left;
+
+}
+
+.sendRequestOption{
+    font-size: 12px;
+    color: #8C7CBF; /* Цвет плейсхолдера */
+    /* Наклонный стиль */
+
+    font-family: Poppins;
+    font-weight: 400;
+    text-align: left;
+}
+
+.custom-buttonSendRequest {
+    width: 350px;
+    height: 45px;
+    background-color: #6a5acc;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: -20px;
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: normal;
+    text-align: center;
+}
+
+.custom-buttonSendRequest:hover {
+    background-color: rgb(95, 60, 204); /* Изменяем цвет фона при наведении */
+}
+
+.sendRequestSVG{
+    width: 50%;
+    margin-left: 400px;
+    margin-top: 100px;
+    display: flex;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.error-message {
+    color: #ba2b2b;
+    margin-top: -90px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    font-family: 'Poppins';
+    font-weight: bold;
+}
+
+.valid {
+    border-color: green;
+}
+
+.invalid {
+    border-color: red;
+}
+
+
+
+.modal-content {
+    /* background-color: #fefefe; */
+    /* margin: 15% auto; */
+    /* padding: 20px; */
+    /* width: 50%; */
+    text-align: center;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.centerRoundedBordPinkQuestion{
+    margin-top: 100px;
+    padding-left: 350px;
+}
+
+.bordPinkQuestion {
+    width: 838px;
+    height: 270px;
+    background-color: #F6F4FF;
+    border-radius: 40px;
+}
+
+.pictureBordPinkQuestion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 278px;
+    padding-left: 70px;
+    margin-top: -270px;
+}
+
+.centerLittleTextBordPinkQuestion {
+
+    text-align: left;
+    margin-top: -20px;
+    margin-left: 380px;
+}
+
+.centerBigTextBordPinkQuestion {
+    text-align: left;
+    margin-top: -278px;
+    margin-left: 380px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.centerSearchQuestion {
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    margin-top: -70px;
+    margin-left: 410px;
+}
+
+.centerSearchQuestion form {
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 46px;
+    width: 260px;
+    margin-top: 70px;
+    margin-left: -35px;
+    background-color: white;
+    box-shadow: 0px 2px 40px 0px #CFD1FE;
+}
+
+.centerSearchQuestion input {
+    border: none;
+    /* height: 90%; */
+    width: calc(100% - 10px);
+    border-radius: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-top: -1px;
+    margin-left: 10px;
+}
+
+.searchButtonContainerQuestion {
+    margin-left: 20px; /* Расстояние между формой и кнопкой */
+}
+
+.searchButtonTrQuestion {
+    background: none;
+    border: none;
+    align-items: center;
+    padding-left: 35px;
+    margin-top: 69px;
+
+}
+
+.searchButtonQuestion svg {
+    width: 100%;
+    height: auto;
+}
+
+.centerSearchQuestion input::placeholder {
+    color: rgba(66, 3, 132, 0.61); /* Замените #your_color на нужный цвет */
+
+}
+
+.centerSearchGlassQuestion {
+    width: 13px;
+    height: 13px;
+    text-align: left;
+    margin-top: -42px;
+    padding-left: 380px;
+}
+
+.learnButtonContainerQuestion{
+    margin-left: 20px;
+}
+
+.custom-buttonSendRequestQuestion{
+    width: 90px;
+    height: 45px;
+    background-color: #6a5acc;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: -20px;
+    margin-top: 70px;
+    font-size: 14px;
+    font-weight: normal;
+    text-align: center;
+}
+
+
+.centerRoundedBordFooter{
+    margin-top: 100px;
+    padding-left: 350px;
+}
+.bordFooter {
+    width: 1518px;
+    height: 380px;
+    background-color: #754FBF;
+    /* border-radius: 40px; */
+    margin-top: 130px;
+    margin-left: -700px;
+}
+
+
+.bordFooterLogo {
+    width: 300px;
+    z-index: 2;
+    /* margin-top: 0px; */
+    margin-left: 100px;
+    padding-top: 60px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.centerTextBordFooter {
+    text-align: left;
+    margin-top: 10px;
+
+}
+
+.centerTextBordFooterReserved {
+    text-align: left;
+    margin-top: 90px;
+    margin-left: 600px;
+}
+
+.ulFooter {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Устанавливаем направление расположения элементов в столбец */
+    margin-right: 80px; /* Устанавливаем расстояние между столбиками в 50px */
+}
+
+.liFooter  {
+    margin-bottom: 10px; /* Промежуток между пунктами списка (по вашему выбору) */
+}
+
+.footerBord {
+    display: flex;
+    flex-direction: row;
+    margin-left: 460px;
+    margin-top: -253px;
+}
+
+.footerA{
+font-weight: normal;
+}
+
+.footerInstSVG {
+    display: flex;
+    margin-left: 385px;
+    margin-top: -175px;
+}
+
+.footerInSVG {
+    display: flex;
+    flex-direction: row;
+    margin-left: 435px;
+    margin-top: -58px;
+}
+
+.footerTiktokSVG {
+    display: flex;
+    flex-direction: row;
+    margin-left: 485px;
+    margin-top: -55px;
+}

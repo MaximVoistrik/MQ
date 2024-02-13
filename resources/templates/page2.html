@@ -1,0 +1,548 @@
+<!--
+&lt;!&ndash;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form with Validation</title>
+    <style>
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+        }
+
+        .form-container {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: #2D196C;
+            font-weight: bold;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            transition: border-color 0.3s;
+        }
+
+        .error-message {
+            color: red;
+            margin-top: -10px;
+            margin-bottom: 10px;
+            font-size: 12px;
+        }
+
+        .valid {
+            border-color: green;
+        }
+
+        .invalid {
+            border-color: red;
+        }
+
+        .custom-buttonSendRequest {
+            background-color: #2D196C;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .custom-buttonSendRequest:hover {
+            background-color: #452A83;
+        }
+
+        .learnButtonContainer {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="sendRequest">
+    <div class="form-container">
+        <form action="#" method="post" class="registration-form" id="sendRequestForm">
+            <label for="firstName">Name:</label>
+            <input type="text" id="firstName" name="firstName" placeholder="Enter your name">
+            <div class="error-message" id="firstNameError"></div>
+
+            <label for="lastName">Surname:</label>
+            <input type="text" id="lastName" name="lastName" placeholder="Enter your surname">
+            <div class="error-message" id="lastNameError"></div>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email">
+            <div class="error-message" id="emailError"></div>
+
+            <label for="phone">Phone number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="+ 375 (__) - ___ - __ - __">
+            <div class="error-message" id="phoneError"></div>
+
+            <label for="course">Pick a Course:</label>
+            <select id="course" name="course" >
+                <option value="" selected disabled hidden></option>
+                <option class="sendRequestOption" value="course1">Course 1</option>
+                <option class="sendRequestOption" value="course2">Course 2</option>
+                <option class="sendRequestOption" value="course3">Course 3</option>
+            </select>
+            <div class="error-message" id="courseError"></div>
+
+            <label for="englishLevel">English level:</label>
+            <select id="englishLevel" name="englishLevel" >
+                <option value="" selected disabled hidden></option>
+                <option class="sendRequestOption" value="beginner">Beginner</option>
+                <option class="sendRequestOption" value="intermediate">Intermediate</option>
+                <option class="sendRequestOption" value="advanced">Advanced</option>
+            </select>
+            <div class="error-message" id="englishLevelError"></div>
+
+            <div class="learnButtonContainer">
+                <button class="custom-buttonSendRequest" type="submit" onclick="validateForm()">Send</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    function validateForm() {
+        // Устанавливаем флаг валидации на начальное значение
+        var isValid = true;
+
+        function setValidity(element, isValid, errorMessage) {
+            var errorId = element.id + "Error";
+            var errorElement = document.getElementById(errorId);
+
+            if (isValid) {
+                element.classList.remove("invalid");
+                element.classList.add("valid");
+                errorElement.innerHTML = "";
+            } else {
+                element.classList.remove("valid");
+                element.classList.add("invalid");
+                errorElement.innerHTML = errorMessage || "This field is required";
+                isValid = false; // Обновляем флаг валидации
+            }
+        }
+
+        function isEmpty(value) {
+            return value.trim() === "";
+        }
+
+        var firstName = document.getElementById("firstName");
+        setValidity(firstName, !isEmpty(firstName.value) && /^[A-Za-zА-Яа-яЁё\s]+$/.test(firstName.value), "Please enter a valid name");
+
+        var lastName = document.getElementById("lastName");
+        setValidity(lastName, !isEmpty(lastName.value) && /^[A-Za-zА-Яа-яЁё\s]+$/.test(lastName.value), "Please enter a valid surname");
+
+        var email = document.getElementById("email");
+        setValidity(email, !isEmpty(email.value) && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value), "Please enter a valid email address");
+
+        var phone = document.getElementById("phone");
+        setValidity(phone, !isEmpty(phone.value) && /^\+375\d{9}$/.test(phone.value), "Please enter a valid phone number");
+
+        var course = document.getElementById("course");
+        setValidity(course, !isEmpty(course.value) && course.value !== "", "Please select a course");
+
+        var englishLevel = document.getElementById("englishLevel");
+        setValidity(englishLevel, !isEmpty(englishLevel.value) && englishLevel.value !== "", "Please select an English level");
+
+        // Отправка формы, если валидация прошла успешно
+        if (isValid) {
+            document.getElementById("sendRequestForm").submit();
+        }
+    }
+
+</script>
+
+</body>
+</html>
+&ndash;&gt;
+&lt;!&ndash;<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form with Validation</title>
+    <style>
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+        }
+
+        .form-container {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: #2D196C;
+            font-weight: bold;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            transition: border-color 0.3s;
+        }
+
+        .error-message {
+            color: red;
+            margin-top: -10px;
+            margin-bottom: 10px;
+            font-size: 12px;
+        }
+
+        .valid {
+            border-color: green;
+        }
+
+        .invalid {
+            border-color: red;
+        }
+
+        .custom-buttonSendRequest {
+            background-color: #2D196C;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .custom-buttonSendRequest:hover {
+            background-color: #452A83;
+        }
+
+        .learnButtonContainer {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="sendRequest">
+    <div class="form-container">
+        <form action="#" method="post" class="registration-form" id="sendRequestForm">
+            <label for="firstName">Name:</label>
+            <input type="text" id="firstName" name="firstName" placeholder="Enter your name">
+            <div class="error-message" id="firstNameError"></div>
+
+            <label for="lastName">Surname:</label>
+            <input type="text" id="lastName" name="lastName" placeholder="Enter your surname">
+            <div class="error-message" id="lastNameError"></div>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email">
+            <div class="error-message" id="emailError"></div>
+
+            <label for="phone">Phone number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="+ 375 (__) - ___ - __ - __">
+            <div class="error-message" id="phoneError"></div>
+
+            <label for="course">Pick a Course:</label>
+            <select id="course" name="course">
+                <option value="" selected disabled hidden></option>
+                <option class="sendRequestOption" value="course1">Course 1</option>
+                <option class="sendRequestOption" value="course2">Course 2</option>
+                <option class="sendRequestOption" value="course3">Course 3</option>
+            </select>
+            <div class="error-message" id="courseError"></div>
+
+            <label for="englishLevel">English level:</label>
+            <select id="englishLevel" name="englishLevel">
+                <option value="" selected disabled hidden></option>
+                <option class="sendRequestOption" value="beginner">Beginner</option>
+                <option class="sendRequestOption" value="intermediate">Intermediate</option>
+                <option class="sendRequestOption" value="advanced">Advanced</option>
+            </select>
+            <div class="error-message" id="englishLevelError"></div>
+
+            <div class="learnButtonContainer">
+                <button class="custom-buttonSendRequest" type="button" onclick="validateForm()">Send</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    function validateForm() {
+        // Устанавливаем флаг валидации на начальное значение
+        var isValid = true;
+
+        function setValidity(element, isValid, errorMessage) {
+            var errorId = element.id + "Error";
+            var errorElement = document.getElementById(errorId);
+
+            if (isValid) {
+                element.classList.remove("invalid");
+                element.classList.add("valid");
+                errorElement.innerHTML = "";
+            } else {
+                element.classList.remove("valid");
+                element.classList.add("invalid");
+                errorElement.innerHTML = errorMessage || "This field is required";
+                isValid = false; // Обновляем флаг валидации
+            }
+
+            return isValid;
+        }
+
+        function isEmpty(value) {
+            return value.trim() === "";
+        }
+
+        isValid = setValidity(document.getElementById("firstName"), !isEmpty(document.getElementById("firstName").value) && /^[A-Za-zА-Яа-яЁё\s]+$/.test(document.getElementById("firstName").value), "Please enter a valid name");
+        isValid = setValidity(document.getElementById("lastName"), isValid && !isEmpty(document.getElementById("lastName").value) && /^[A-Za-zА-Яа-яЁё\s]+$/.test(document.getElementById("lastName").value), "Please enter a valid surname");
+        isValid = setValidity(document.getElementById("email"), isValid && !isEmpty(document.getElementById("email").value) && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(document.getElementById("email").value), "Please enter a valid email address");
+        isValid = setValidity(document.getElementById("phone"), isValid && !isEmpty(document.getElementById("phone").value) && /^\+\d{12}$/.test(document.getElementById("phone").value), "Please enter a valid phone number");
+        isValid = setValidity(document.getElementById("course"), isValid && !isEmpty(document.getElementById("course").value), "Please select a course");
+        isValid = setValidity(document.getElementById("englishLevel"), isValid && !isEmpty(document.getElementById("englishLevel").value), "Please select an English level");
+
+        // Отправка формы, если валидация прошла успешно
+        if (isValid) {
+            document.getElementById("sendRequestForm").submit();
+        }
+    }
+
+</script>
+
+</body>
+</html>&ndash;&gt;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form with Validation</title>
+    <style>
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+        }
+
+        .form-container {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: #2D196C;
+            font-weight: bold;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            transition: border-color 0.3s;
+        }
+
+        .error-message {
+            color: red;
+            margin-top: -10px;
+            margin-bottom: 10px;
+            font-size: 12px;
+        }
+
+        .valid {
+            border-color: green;
+        }
+
+        .invalid {
+            border-color: red;
+        }
+
+        .custom-buttonSendRequest {
+            background-color: #2D196C;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .custom-buttonSendRequest:hover {
+            background-color: #452A83;
+        }
+
+        .learnButtonContainer {
+            text-align: center;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 300px;
+            height: 100px;
+            border-radius: 30px;
+            background-color: rgb(255, 255, 255);
+            box-shadow: 0px 2px 40px 0px #D0D2FE;
+            margin-left: 600px;
+            margin-top: 200px;
+        }
+
+        .modal-content {
+            /* background-color: #fefefe; */
+            /* margin: 15% auto; */
+            /* padding: 20px; */
+            /* width: 50%; */
+            text-align: center;
+
+        }
+
+        img{
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+<div id="successModal" class="modal">
+    <div class="modal-content">
+<p style="font-size: 24px; font-family: 'Poppins'; color: #2D196C; font-weight: bold"> Thank you, we will contact you!</p>
+    </div>
+</div>
+<div class="sendRequest">
+    <div class="form-container">
+        <form action="#" method="post" class="registration-form" id="sendRequestForm">
+            <label for="firstName">Name:</label>
+            <input type="text" id="firstName" name="firstName" placeholder="Enter your name">
+            <span class="error-message" id="firstNameError"></span>
+
+            <label for="lastName">Surname:</label>
+            <input type="text" id="lastName" name="lastName" placeholder="Enter your surname">
+            <span class="error-message" id="lastNameError"></span>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email">
+            <span class="error-message" id="emailError"></span>
+
+            <label for="phone">Phone number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="+ 375 (__) - ___ - __ - __">
+            <span class="error-message" id="phoneError"></span>
+
+            <label for="course">Pick a Course:</label>
+            <select id="course" name="course">
+                <option value="" selected disabled hidden></option>
+                <option class="sendRequestOption" value="course1">Course 1</option>
+                <option class="sendRequestOption" value="course2">Course 2</option>
+                <option class="sendRequestOption" value="course3">Course 3</option>
+            </select>
+            <span class="error-message" id="courseError"></span>
+
+            <label for="englishLevel">English level:</label>
+            <select id="englishLevel" name="englishLevel">
+                <option value="" selected disabled hidden></option>
+                <option class="sendRequestOption" value="beginner">Beginner</option>
+                <option class="sendRequestOption" value="intermediate">Intermediate</option>
+                <option class="sendRequestOption" value="advanced">Advanced</option>
+            </select>
+            <span class="error-message" id="englishLevelError"></span>
+
+            <div class="learnButtonContainer">
+                <button class="custom-buttonSendRequest" type="button" onclick="validateForm()">Send</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+
+
+
+        function openModal() {
+        document.getElementById('successModal').style.display = 'block';
+        setTimeout(function () {
+        closeModal();
+        resetForm();
+    }, 300000);
+    }
+
+        function closeModal() {
+        document.getElementById('successModal').style.display = 'none';
+    }
+
+        document.querySelector('.close').addEventListener('click', closeModal);
+
+        window.addEventListener('click', function (event) {
+        if (event.target === document.getElementById('successModal')) {
+        closeModal();
+        resetForm();
+    }
+    });
+
+        function validateForm() {
+        var isFirstNameValid = validateField("firstName", /^[A-Za-zА-Яа-яЁё\s]+$/, "Пожалуйста, введите корректное имя");
+        var isLastNameValid = validateField("lastName", /^[A-Za-zА-Яа-яЁё\s]+$/, "Пожалуйста, введите корректную фамилию");
+        var isEmailValid = validateField("email", /^[^\s@]+@[^\s@]+\.[^\s@]+$/, "Пожалуйста, введите корректный адрес электронной почты");
+        var isPhoneValid = validateField("phone", /^\+\d{12}$/, "Пожалуйста, введите корректный номер телефона");
+        var isCourseValid = validateField("course", /.+/, "Пожалуйста, выберите курс");
+        var isEnglishLevelValid = validateField("englishLevel", /.+/, "Пожалуйста, выберите уровень английского");
+
+        if (isFirstNameValid && isLastNameValid && isEmailValid && isPhoneValid && isCourseValid && isEnglishLevelValid) {
+        openModal();
+    }
+    }
+
+        function validateField(fieldId, pattern, errorMessage) {
+        var element = document.getElementById(fieldId);
+        var errorId = fieldId + "Error";
+        var errorElement = document.getElementById(errorId);
+
+        var isValid = pattern.test(element.value.trim());
+
+        if (isValid) {
+        element.classList.remove("invalid");
+        element.classList.add("valid");
+        errorElement.innerHTML = "";
+    } else {
+        element.classList.remove("valid");
+        element.classList.add("invalid");
+        errorElement.innerHTML = errorMessage || "Это поле обязательно для заполнения";
+    }
+
+        return isValid;
+    }
+
+        function resetForm() {
+        document.getElementById("sendRequestForm").reset();
+        var formElements = document.getElementsByClassName("error-message");
+        for (var i = 0; i < formElements.length; i++) {
+        formElements[i].innerHTML = "";
+    }
+        var inputElements = document.querySelectorAll(".valid, .invalid");
+        inputElements.forEach(function (element) {
+        element.classList.remove("valid", "invalid");
+    });
+    }
+
+
+&lt;!&ndash; ... (оставшийся HTML-код) ... &ndash;&gt;
+
+</script>
+
+
+</body>
+</html>
+
+-->
